@@ -1,6 +1,7 @@
 .app-header {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 1rem;
   padding: 0.9rem 1.5rem;
   background: var(--bs-body-bg);
