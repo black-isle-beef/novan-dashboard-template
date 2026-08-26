@@ -1,7 +1,7 @@
 .hero-section {
   padding: 3rem 2rem;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #e8f0df 0%, #f5f7f5 60%);
+  background: linear-gradient(135deg, var(--bs-success-bg-subtle) 0%, var(--bs-body-bg) 60%);
   border-radius: var(--bs-border-radius, 0.65rem);
 }
 
@@ -22,5 +22,5 @@
 .hero-copy {
   max-width: 40rem;
   margin-bottom: 1.5rem;
-  color: #63716b;
+  color: var(--bs-secondary-color);
 }

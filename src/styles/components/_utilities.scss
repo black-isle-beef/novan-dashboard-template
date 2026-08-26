@@ -12,7 +12,7 @@
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #f28f3b;
+  outline: 3px solid var(--bs-warning);
   outline-offset: 3px;
 }
 

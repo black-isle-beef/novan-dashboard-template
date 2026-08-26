@@ -1,6 +1,6 @@
 import axe from 'axe-core';
 
-/** Runs axe-core against an element and fails the test if any violations are found. */
+/** Runs axe-core against an element and fails the test when violations are found. */
 export async function expectNoA11yViolations(element: Element): Promise<void> {
   const results = await axe.run(element, {
     // jsdom lacks layout/rendering, so rules relying on computed visual styles are unreliable.
