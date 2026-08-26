@@ -73,7 +73,7 @@ app-sidebar {
 
     &:hover,
     &.active {
-      color: var(--bs-white);
+      color: var(--bs-dark);
       background: var(--bs-light-bg-subtle);
     }
   }
@@ -94,13 +94,14 @@ app-sidebar {
     border-radius: 0.5rem;
 
     i {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       -webkit-text-stroke: 1px currentColor;
       transition: transform 0.4s ease;
     }
 
     &:hover {
       background: var(--bs-light-bg-subtle);
+      color: var(--bs-dark);
     }
   }
 
