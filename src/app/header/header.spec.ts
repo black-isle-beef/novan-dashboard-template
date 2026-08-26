@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { HeaderComponent } from './header';
-import { expectNoA11yViolations } from '../testing/axe-helper';
+import { expectNoA11yViolations } from '../../testing/axe-helper';
 
 describe('HeaderComponent', () => {
   beforeEach(async () => {
