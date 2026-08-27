@@ -1,0 +1,128 @@
+$sidebar-width: 16rem;
+$sidebar-rail-width: 3.75rem; // 60px
+$sidebar-bg: var(--bs-dark);
+$sidebar-color: var(--bs-light);
+$sidebar-toggle-size: 3.125rem; // 50px
+
+.app-body {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+
+novan-sidebar {
+  display: flex;
+  align-self: stretch;
+}
+
+.app-sidebar {
+  position: relative;
+  flex: 0 0 $sidebar-rail-width;
+  width: $sidebar-rail-width;
+  align-self: stretch;
+  color: $sidebar-color;
+  background: $sidebar-bg;
+  transition: flex-basis 0.3s ease, width 0.3s ease;
+
+  &.is-open {
+    flex-basis: $sidebar-width;
+    width: $sidebar-width;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: $sidebar-rail-width;
+    padding: 1.5rem 0.3125rem;
+    overflow: hidden;
+    background: $sidebar-bg;
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  &.is-open nav {
+    width: $sidebar-width;
+  }
+
+  &:not(.is-open) nav a span {
+    display: none;
+  }
+
+  nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem;
+    color: $sidebar-color;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 0.5rem;
+
+    i {
+      flex: 0 0 1.5rem;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    &:hover,
+    &.active {
+      color: var(--bs-dark);
+      background: var(--bs-light-bg-subtle);
+    }
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    flex: 0 0 $sidebar-toggle-size;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: $sidebar-toggle-size;
+    height: $sidebar-toggle-size;
+    padding: 0;
+    margin-top: auto;
+    color: var(--bs-white);
+    background: $sidebar-bg;
+    border: 1px solid var(--bs-white);
+    border-radius: 0.5rem;
+
+    i {
+      font-size: 1.5rem;
+      -webkit-text-stroke: 1px currentColor;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover {
+      background: var(--bs-light-bg-subtle);
+      color: var(--bs-dark);
+    }
+  }
+
+  &.is-open .sidebar-toggle {
+    align-self: flex-end;
+
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  overflow-y: auto;
+}
+
+@media (max-width: 767.98px) {
+  .app-sidebar nav {
+    box-shadow: var(--bs-box-shadow);
+  }
+}

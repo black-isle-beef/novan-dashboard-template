@@ -1,0 +1,27 @@
+.hero-section {
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  background: var(--bs-dark);
+  border-radius: var(--bs-border-radius, 0.65rem);
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--bs-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-section h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  color: var(--bs-light);
+}
+
+.hero-copy {
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+  color: var(--bs-white);
+}
